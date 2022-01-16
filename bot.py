@@ -35,7 +35,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Lyuks Tag Bot'un Yardım Menyusu**\n\nKomut: /all \n  Bu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsinizn`Örnek: /all Sabahınız Xeyir!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
+  helptext = "**𝙽𝙾𝚁𝚆𝙰𝚈 𝚃𝙰𝙶 🇳🇴 Bot'un Yardım Menyusu**\n\nKomut: /all \n  Bu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsinizn`Örnek: /all Sabahınız Xeyir!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/NorwayTagBot?startgroup=a'),
