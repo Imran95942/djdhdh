@@ -25,11 +25,11 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**Lyuks Tag Bot**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm ★\nDaha çoxu üçün **/help**'ə tıklayın.",
+  await event.reply("**𝙽𝙾𝚁𝚆𝙰𝚈 𝚃𝙰𝙶 🇳🇴**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm ★\nDaha çoxu üçün **/help**'ə tıklayın.",
                     buttons=(
-                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/LyuksTagBot?startgroup=a'),
-                      Button.url('🗨️ Qrupumuz', 'https://t.me/SohbetLyuks'),
-                      Button.url('🚀 Sahibim', 'https://t.me/LyuksBoss')]
+                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/NorwayTagBot?startgroup=a'),
+                      Button.url('🗨️ Qrupumuz', 'https://t.me/NorwayChat'),
+                      Button.url('🚀 Sahibim', 'https://t.me/Vusaldeveloper')]
                     ),
                     link_preview=False
                    )
@@ -38,9 +38,9 @@ async def help(event):
   helptext = "**Lyuks Tag Bot'un Yardım Menyusu**\n\nKomut: /all \n  Bu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsinizn`Örnek: /all Sabahınız Xeyir!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/LyuksTagBot?startgroup=a'),
-                       Button.url('🗨️ Qrupumuz', 'https://t.me/SohbetLyuks'),
-                      Button.url('🚀 Sahibim', 'https://t.me/LyuksBoss')]
+                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/NorwayTagBot?startgroup=a'),
+                       Button.url('🗨️ Qrupumuz', 'https://t.me/NorwayChat'),
+                      Button.url('🚀 Sahibim', 'https://t.me/Vusaldeveloper')]
                     ),
                     link_preview=False
                    )
