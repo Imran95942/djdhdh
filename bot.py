@@ -17,34 +17,10 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 anlik_calisan = []
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/finish'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-
-
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("**𝙽𝙾𝚁𝚆𝙰𝚈 𝚃𝙰𝙶 🇳🇴**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm ★\nDaha çoxu üçün **/help**'ə tıklayın.",
-                    buttons=(
-                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/NorwayTagBot?startgroup=a'),
-                      Button.url('🗨️ Qrupumuz', 'https://t.me/NorwayChat'),
-                      Button.url('🚀 Sahibim', 'https://t.me/Vusaldeveloper')]
-                    ),
-                    link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**𝙽𝙾𝚁𝚆𝙰𝚈 𝚃𝙰𝙶 🇳🇴 Bot'un Yardım Menyusu**\n\nKomut: /all \n  Bu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsinizn`Örnek: /all Sabahınız Xeyir!`  \nBu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('🌟 Məni qrupa əlavə et', 'https://t.me/NorwayTagBot?startgroup=a'),
-                       Button.url('🗨️ Qrupumuz', 'https://t.me/NorwayChat'),
-                      Button.url('🚀 Sahibim', 'https://t.me/Vusaldeveloper')]
-                    ),
-                    link_preview=False
-                   )
-
 
 @client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
@@ -81,9 +57,9 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("Proses Uğurla Dayandırıldı ❌")
         return
-      if usrnum == 5:
+      if usrnum == 15:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
-        await asyncio.sleep(2)
+        await asyncio.sleep(1)
         usrnum = 0
         usrtxt = ""
         
@@ -99,9 +75,9 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("Proses Uğurla Dayandırıldı ❌")
         return
-      if usrnum == 5:
+      if usrnum == 15:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-        await asyncio.sleep(2)
+        await asyncio.sleep(1)
         usrnum = 0
         usrtxt = ""
 
